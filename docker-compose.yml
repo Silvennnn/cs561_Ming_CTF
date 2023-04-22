@@ -1,0 +1,22 @@
+name: L0gin
+description:
+
+  This is a challenge designed to test your Web development skill and a little bit about decoding hiding information in images.
+
+  **Connection Instructions:**
+  
+  Do the following:
+
+    $ `ssh -L localhost:<local port>:<container_name>:<container_port> -p 8080 <username>@cs561.cs.umass.edu`
+
+    For example, run
+    $ `ssh -L localhost:8080:<container_name>:<container_port> -p 8080 <username>@cs561.cs.umass.edu`
+
+    This will forward your local port 8080 to the challenge. Please try going to localhost:8080 on your browser to start the challenge.
+
+value: 100
+category: Web
+flag: CTF_SDaT{M_I_N_G}
+
+# administrative
+container_name:

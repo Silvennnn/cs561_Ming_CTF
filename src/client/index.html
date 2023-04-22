@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-<!--    <script type="module" src="../index.js"></script>-->
     <script>
         function getInfo() {
             return {
@@ -44,7 +43,7 @@
 <body>
     <div class="nav-bar">
         <ul>
-<!--            <li class="left"><a>Home</a></li>-->
+            <li class="left"><a href="index.html">Login</a></li>
         </ul>
     </div>
 
@@ -54,19 +53,18 @@
         </div>
 
         <div class="login-container">
-<!--            <form>-->
-                <div class="flex-col center">
-                    <label style="font-family: Arial">Username</label>
-                    <input type="text" id="Username">
-                    <label style="font-family: Arial">Password</label>
-                    <input type="password" id="Password">
+            <div class="flex-col center">
+                <label style="font-family: Arial">Username</label>
+                <input type="text" id="Username">
+                <label style="font-family: Arial">Password</label>
+                <input type="password" id="Password">
 
-                    <div class="flex-row">
-                        <div style="width: 25%">
-                            <button class="submit-button" id="login" onclick="submit()">Submit</button>
-                        </div>
+                <div class="flex-row">
+                    <div style="width: 25%">
+                        <button class="submit-button" id="login" onclick="submit()">Submit</button>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 
