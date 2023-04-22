@@ -1,0 +1,103 @@
+.large-frame-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login-container {
+    width: 100%;
+    margin-top: 15px;
+    background: #f5f2f2;
+    height: 350px;
+    border-radius: 8px;
+}
+
+.empty {
+    width: 100%;
+    margin-top: 15px;
+    height: 250px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.center {
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.header {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c4c2c2;
+}
+
+.title-style{
+    font-size: 30px;
+    font-family: Arial;
+    color: #858383;
+    font-weight: bold;
+}
+
+input[type=text], select {
+    font-size: 17px;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    font-size: 17px;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.forget {
+    width: 100%;
+    background-color: #e0dede;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.forget:hover {
+    background-color: #bdbbbb;
+    cursor: pointer;
+}

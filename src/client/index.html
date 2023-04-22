@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+<!--    <script type="module" src="../index.js"></script>-->
+    <script>
+        function getInfo() {
+            return {
+                username: document.getElementById("Username").value,
+                password: document.getElementById("Password").value
+            };
+        }
+
+        async function submit() {
+            const user = getInfo();
+            const inputUsername = btoa(user.username);
+
+            if (inputUsername !== "SGVyZUlzVGhlVXNlcm5hbWU=") {
+                alert("Username Incorrect!")
+            } else {
+                // Send Login Request
+                const response = await fetch(`/getpsw?username=${inputUsername}`, {
+                    method: "GET",
+                })
+                const data = await response.json();
+                if (user.password === data.password) {
+                    alert("Login Success!")
+                    const nextResponse = await fetch(`/next?username=${inputUsername}&password=${user.password}`, {
+                        method: "GET",
+                    })
+                    window.location.replace(nextResponse.url)
+                } else {
+                    alert("Password Incorrect!")
+                }
+            }
+
+        }
+
+    </script>
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+<!--            <li class="left"><a>Home</a></li>-->
+        </ul>
+    </div>
+
+    <div class="large-frame-container">
+        <div class="header">
+            <p class="title-style">System Login</p>
+        </div>
+
+        <div class="login-container">
+<!--            <form>-->
+                <div class="flex-col center">
+                    <label style="font-family: Arial">Username</label>
+                    <input type="text" id="Username">
+                    <label style="font-family: Arial">Password</label>
+                    <input type="password" id="Password">
+
+                    <div class="flex-row">
+                        <div style="width: 25%">
+                            <button class="submit-button" id="login" onclick="submit()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
